@@ -1,0 +1,12 @@
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform directory containing plugins and provider binaries
+.terraform/
+
+# Credentials file
+creds/credentials.json
+
+# Other common Terraform ignore patterns
+*.log
