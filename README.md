@@ -1,7 +1,7 @@
 Requirements :
 
 - Install [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-- Install [gcloud CLI](https://cloud.google.com/sdk/docs/install) and [credentials.json](https://cloud.google.com/iam/docs/keys-create-delete)
+- Install [gcloud CLI](https://cloud.google.com/sdk/docs/install) and get your [credentials.json](https://cloud.google.com/iam/docs/keys-create-delete)
 
 ## List Services
 
@@ -58,10 +58,26 @@ Before run make sure gcloud cli already installed and login in your cli
 ```bash
 gcloud auth application-default login
 ```
+or using JSON
 
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=~/gcp-key.json
+gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+```
 Change in terraform.tfvars with your spesified value
 
 and make sure to change project_id
+
+before run terraform makesure to enable API
+
+```bash
+gcloud services enable \
+  compute.googleapis.com \
+  sqladmin.googleapis.com \
+  servicenetworking.googleapis.com \
+  cloudresourcemanager.googleapis.com \
+  iam.googleapis.com
+```
 
 Then next to run terraform
 
