@@ -1,5 +1,7 @@
 # main var
 credentials_file        = "creds/credentials.json"
+
+# Makesure to change the project ID
 project_id              = "unique-hash-448408-d6"
 
 # mysql
