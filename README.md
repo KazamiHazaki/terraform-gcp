@@ -58,7 +58,12 @@ Before run make sure gcloud cli already installed and login in your cli
 ```bash
 gcloud auth application-default login
 ```
+or using JSON
 
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=~/gcp-key.json
+gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+```
 Change in terraform.tfvars with your spesified value
 
 and make sure to change project_id
