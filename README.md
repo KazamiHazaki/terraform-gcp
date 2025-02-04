@@ -68,6 +68,17 @@ Change in terraform.tfvars with your spesified value
 
 and make sure to change project_id
 
+before run terraform makesure to enable API
+
+```bash
+gcloud services enable \
+  compute.googleapis.com \
+  sqladmin.googleapis.com \
+  servicenetworking.googleapis.com \
+  cloudresourcemanager.googleapis.com \
+  iam.googleapis.com
+```
+
 Then next to run terraform
 
 1. Install dependencies terraform
