@@ -1,5 +1,6 @@
 credentials_file        = "creds/credentials.json"
-project_id              = "unique-hash-448408-d6"
+# makesure to change project ID
+project_id              = "your project id"
 
 # mysql
 sql_instance_name       = "mysql-terraform"
