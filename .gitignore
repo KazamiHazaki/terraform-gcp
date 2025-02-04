@@ -4,7 +4,7 @@ terraform.tfstate.backup
 .terraform.lock.hcl
 # Terraform directory containing plugins and provider binaries
 .terraform/
-
+terraform.tfvars
 # Credentials file
 creds/credentials.json
 

@@ -1,38 +1,40 @@
 # main var
 credentials_file        = "creds/credentials.json"
-project_id              = "gcp-project-id"
+project_id              = "unique-hash-448408-d6"
 
 # mysql
-sql_instance_name       = "mysql-terraform"
-sql_database_name       = "my-database-terraform"
-sql_username            = "db-user"
+sql_instance_name       = "rbm-sql-dev"
+sql_database_name       = "rbm-dev"
+sql_username            = "rbm-dev-local"
 
 # compute instance
-vm_instance_name        = "vm-terraform"
+vm_instance_name        = "worker"
 region_vm = "us-central1-a"
 vm_machine_type = "e2-micro"
 
 # pubsub
 topic_names = [
-  "topic1",
-  "topic2",
-  "topic3"
+  "import-contact-group",
+  "publisher",
+  "worker",
+  "viewer-detail-campaign"
 ]
 
 subscription_names = [
-  "topic1",
-  "topic2",
-  "topic3"
+  "import-contact-group",
+  "publisher",
+  "worker",
+  "viewer-detail-campaign"
 ]
 
 
 # registry
-registry_name          = "my-name-terraform"
+registry_name          = "rbm-main"
 registry_location      = "asia-southeast2"
 
 
 # gcs
 
-bucket_names     = ["tf-test-config", "tf-test-asset", "tf-test-contact"]
+bucket_names     = ["sinergidev-assets", "sinergidev-config", "sinergidev-contact"]
 bucket_location  = "US"
-public_bucket_name = "tf-test-asset"
+public_bucket_name = "sinergidev-assets"

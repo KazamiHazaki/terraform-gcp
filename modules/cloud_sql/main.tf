@@ -1,3 +1,20 @@
+# Reserve an internal IP range for Private Service Access (PSA)
+resource "google_compute_global_address" "private_ip_alloc" {
+  name          = "private-ip-allocation"
+  project       = var.project_id
+  purpose       = "VPC_PEERING"
+  address_type  = "INTERNAL"
+  prefix_length = 16
+  network       = "projects/${var.project_id}/global/networks/default"
+}
+
+# Create a VPC peering connection for Private Service Access
+resource "google_service_networking_connection" "private_vpc_connection" {
+  network                 = "projects/${var.project_id}/global/networks/default"
+  service                 = "servicenetworking.googleapis.com"
+  reserved_peering_ranges = [google_compute_global_address.private_ip_alloc.name]
+}
+
 resource "google_sql_database_instance" "mysql" {
   name             = var.instance_name
   database_version = "MYSQL_8_0"
