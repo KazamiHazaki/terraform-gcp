@@ -1,7 +1,7 @@
 Requirements :
 
 - Install [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-- Install [gcloud CLI](https://cloud.google.com/sdk/docs/install) and [credentials.json](https://cloud.google.com/iam/docs/keys-create-delete)
+- Install [gcloud CLI](https://cloud.google.com/sdk/docs/install) and get your [credentials.json](https://cloud.google.com/iam/docs/keys-create-delete)
 
 ## List Services
 
